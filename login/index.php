@@ -4,8 +4,7 @@ session_start();
 include('../koneksi/koneksi.php');
 
 if (!isset($_SESSION['$username'])) {
-    echo "Anda Belum Login <br><a href='login.php'>Klik Disini</a>";
-    exit;
+    header("Location:login.php");
 }
 $username = $_SESSION['username'];
 
@@ -22,6 +21,7 @@ $username = $_SESSION['username'];
 
 <body>
     <h1>Berhasil Masuk</h1>
+    <h1><?= $_SESSION['username']; ?></h1>
 </body>
 
 </html>

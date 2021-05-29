@@ -12,12 +12,11 @@ $hasil = mysqli_query($db, "SELECT * FROM admin WHERE username='$username' AND p
 $d = mysqli_num_rows($hasil);
 
 if ($hasil > 0) {
-    $row =
-        mysqli_fetch_assoc($hasil);
+    $row = mysqli_fetch_assoc($hasil);
     $_SESSION['username'] = $row['username'];
     $_SESSION['password'] = $row['password'];
 
     header("Location:index.php");
 } else {
-    echo "Username Atau Password Yang Anda Masukkan Salah <br><a> href='login.php'>Kembali</a>";
+    header("Location:login.php?pesan=gagal login");
 }

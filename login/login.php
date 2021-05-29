@@ -42,11 +42,11 @@
                                     </div>
                                     <form action="login-aksi.php" method="POST" class="user">
                                         <div class="form-group">
-                                            <input type="username" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Masukkan Username">
+                                            <input type="username" name="username" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Masukkan Username">
                                         </div>
                                         <hr>
                                         <div class="form-group">
-                                            <input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Masukkan Password">
+                                            <input type="password" name="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Masukkan Password">
                                         </div>
                                         <hr>
                                         <div class="form-group">
