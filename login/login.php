@@ -1,3 +1,21 @@
+<?php
+require_once 'Auth.php';
+
+if ($auth->isLoggedIn()) {
+    header('location:../dashborad/index.php');
+}
+
+if (isset($_POST['submit'])) {
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+
+    if ($auth->login($username, $password)) {
+        header('location:../dashborad/index.php');
+    }
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -40,7 +58,18 @@
                                         <h1 class="h4 text-gray-900 mb-4">Silahkan Login</h1>
                                         <hr>
                                     </div>
-                                    <form action="login-aksi.php" method="POST" class="user">
+                                    <div style="text-align: center; color: #ff0000;">
+                                        <span>
+
+                                            <?php
+                                            if (isset($_SESSION['error'])) {
+                                                echo $_SESSION['error'];
+                                            }
+                                            ?>
+
+                                        </span>
+                                    </div>
+                                    <form method="POST" class="user">
                                         <div class="form-group">
                                             <input type="username" name="username" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Masukkan Username">
                                         </div>
@@ -50,7 +79,7 @@
                                         </div>
                                         <hr>
                                         <div class="form-group">
-                                            <input type="submit" name="login" class="btn btn-primary btn-user btn-block">
+                                            <input type="submit" name="submit" value="Login" class="btn btn-primary btn-user btn-block">
                                         </div>
 
                                     </form>
