@@ -41,13 +41,12 @@
                                     </div>
                                     <hr>
                                     <form class="user">
-                                        <div class="form-group">
-                                            <input type="text" name="username" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Username">
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="password" name="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password">
-                                        </div>
-                                        <button type="submit" name="login" class="btn btn-primary btn-user btn-block">Log-in</button>
+                                        <input type="text" class="form-control" placeholder="Username" name="username" required autofocus>
+                                        <br>
+                                        <input type="password" class="form-control" placeholder="Password" name="password" required>
+                                        <br>
+                                        <button class="btn btn-lg btn-primary btn-block" type="submit" name="login">Sign in</button>
+                                        <hr>
                                     </form>
                                 </div>
                             </div>
