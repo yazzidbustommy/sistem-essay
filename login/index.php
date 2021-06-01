@@ -1,21 +1,3 @@
-<?php
-require_once 'Auth.php';
-
-if ($auth->isLoggedIn()) {
-    header('location:../dashborad/index.php');
-}
-
-if (isset($_POST['submit'])) {
-    $username = $_POST['username'];
-    $password = $_POST['password'];
-
-    if ($auth->login($username, $password)) {
-        header('location:../dashborad/index.php');
-    }
-}
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,10 +9,10 @@ if (isset($_POST['submit'])) {
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Essay</title>
+    <title>SB Admin 2 - Login</title>
 
     <!-- Custom fonts for this template-->
-    <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
     <!-- Custom styles for this template-->
@@ -51,39 +33,32 @@ if (isset($_POST['submit'])) {
                     <div class="card-body p-0">
                         <!-- Nested Row within Card Body -->
                         <div class="row">
-
+                            <div class="col-lg-6 d-none d-lg-block bg-login-image"></div>
                             <div class="col-lg-6">
                                 <div class="p-5">
                                     <div class="text-center">
-                                        <h1 class="h4 text-gray-900 mb-4">Silahkan Login</h1>
-                                        <hr>
+                                        <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
                                     </div>
-                                    <div style="text-align: center; color: #ff0000;">
-                                        <span>
-
-                                            <?php
-                                            if (isset($_SESSION['error'])) {
-                                                echo $_SESSION['error'];
-                                            }
-                                            ?>
-
-                                        </span>
-                                    </div>
-                                    <form method="POST" class="user">
+                                    <form class="user">
                                         <div class="form-group">
-                                            <input type="username" name="username" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Masukkan Username">
+                                            <input type="email" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Enter Email Address...">
                                         </div>
+                                        <div class="form-group">
+                                            <input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password">
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="custom-control custom-checkbox small">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck">
+                                                <label class="custom-control-label" for="customCheck">Remember
+                                                    Me</label>
+                                            </div>
+                                        </div>
+                                        <a href="index.html" class="btn btn-primary btn-user btn-block">
+                                            Login
+                                        </a>
                                         <hr>
-                                        <div class="form-group">
-                                            <input type="password" name="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Masukkan Password">
-                                        </div>
-                                        <hr>
-                                        <div class="form-group">
-                                            <input type="submit" name="submit" value="Login" class="btn btn-primary btn-user btn-block">
-                                        </div>
 
                                     </form>
-
 
                                 </div>
                             </div>

@@ -1,6 +1,7 @@
 <?php
 include '../koneksi/koneksi.php';
-include '../head.php' ?>
+include '../head.php';
+?>
 <?php include '../body.php' ?>
 <div class="container-fluid">
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
