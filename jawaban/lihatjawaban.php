@@ -12,6 +12,8 @@ while ($d = mysqli_fetch_array($data)) {
 
         <div class="card shadow mb-4">
             <div class="card-header py-3">
+                <a href="tambahjawaban.php?id_soal=<?php echo $d['id_soal']; ?>"><button type="button" class="btn btn-success" style="margin-bottom: 10px;">
+                        <i class="fa fa-plus"></i> Tambah Jawaban</button></a>
                 <h6 class="m-0 font-weight-bold text-primary">Soal : <br><?= $d['pertanyaan']; ?></h6>
             </div>
         <?php }  ?>
@@ -39,7 +41,7 @@ while ($d = mysqli_fetch_array($data)) {
                             <td><?php echo $da['nama_siswa']; ?></td>
                             <td><a href="editjawaban.php?id_jawaban=<?php echo $da['id_jawaban']; ?>" class="btn btn-primary modal_edit">
                                     <i class="fa fa-edit"></i>EDIT</a>
-                                <a href="hapussiswa.php?nis=<?php echo $d['nis']; ?>" onclick="javascript: return confirm('Anda yakin hapus ?')" class="btn btn-danger modal_delete">
+                                <a href="hapusjawaban.php?nis=<?php echo $d['nis']; ?>" onclick="javascript: return confirm('Anda yakin hapus ?')" class="btn btn-danger modal_delete">
                                     <i class="fa fa-trash"></i>HAPUS</a>
                             </td>
                         </tr>
