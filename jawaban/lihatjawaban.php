@@ -41,7 +41,7 @@ while ($d = mysqli_fetch_array($data)) {
                             <td><?php echo $da['nama_siswa']; ?></td>
                             <td><a href="editjawaban.php?id_jawaban=<?php echo $da['id_jawaban']; ?>" class="btn btn-primary modal_edit">
                                     <i class="fa fa-edit"></i>EDIT</a>
-                                <a href="hapusjawaban.php?nis=<?php echo $d['nis']; ?>" onclick="javascript: return confirm('Anda yakin hapus ?')" class="btn btn-danger modal_delete">
+                                <a href="hapusjawaban.php?id_jawaban=<?php echo $da['id_jawaban']; ?>" onclick="javascript: return confirm('Anda yakin hapus ?')" class="btn btn-danger modal_delete">
                                     <i class="fa fa-trash"></i>HAPUS</a>
                             </td>
                         </tr>

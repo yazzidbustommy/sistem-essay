@@ -14,7 +14,7 @@ while ($d = mysqli_fetch_array($data)) {
                 <form action="" method="POST">
                     <div class="mb-3">
                         <label for="" class="form-label">JAWABAN</label>
-                        <input required class="form-control" type="text" name="jawaban" value="<?php echo $d['pertanyaan']; ?>">
+                        <input required class="form-control" type="text" name="jawaban" value="<?php echo $d['jawaban']; ?>">
                     </div>
                     <button type="submit" name="submit" class="btn btn-success" style="margin-bottom: 10px;">
                         <i class="fa fa-save"></i> SIMPAN</button>
@@ -31,9 +31,9 @@ if (isset($_POST['submit'])) {
     $jawaban = $_POST['jawaban'];
 
     // menginput data ke database
-    mysqli_query($db, "UPDATE jawaban SET jawaban='$jawaban' where id-jawaban=$id_jawaban");
+    mysqli_query($db, "UPDATE jawaban SET jawaban='$jawaban' where id_jawaban=$id_jawaban");
 
     // mengalihkan halaman kembali ke index.php
-    echo "<script>alert('Data berhasil diubah.');window.location='soal.php';</script>";
+    echo "<script>alert('Data berhasil diubah.');window.location='jawaban.php';</script>";
 }
 ?>
