@@ -28,7 +28,7 @@
                             <td><?php echo $no++; ?></td>
                             <td><?php echo $d['nama_jenissoal']; ?></td>
                             <td>
-                                <a href="pilihpertanyaan.php?id_jenissoal=<?php echo $d['id_jenissoal']; ?>" class="btn btn-primary modal_edit">Pilih Soal</a>
+                                <a href="pilihpertanyaan.php?id_jenissoal=<?php echo $d['id_jenissoal']; ?>" class="btn btn-primary">Pilih Soal</a>
                             </td>
                         </tr>
                     <?php } ?>

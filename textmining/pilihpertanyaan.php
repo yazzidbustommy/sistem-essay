@@ -33,7 +33,7 @@ while ($d = mysqli_fetch_array($data)) {
                                 <td><?php echo $no++; ?></td>
                                 <td><?php echo $da['pertanyaan']; ?></td>
                                 <td>
-                                    <a href="inputquery.php?id_soal=<?php echo $da['id_soal']; ?>" class="btn btn-primary modal_edit">Pilih </a>
+                                    <a href="inputquery.php?id_soal=<?php echo $da['id_soal']; ?>" class="btn btn-primary">Pilih </a>
                                 </td>
                             </tr>
                         <?php } ?>

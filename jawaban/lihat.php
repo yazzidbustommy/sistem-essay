@@ -34,7 +34,7 @@ while ($d = mysqli_fetch_array($data)) {
                             <td><?php echo $no++; ?></td>
                             <td><?php echo $da['pertanyaan']; ?></td>
                             <td>
-                                <a href="lihatjawaban.php?id_soal=<?php echo $da['id_soal']; ?>" class="btn btn-primary modal_edit">
+                                <a href="lihatjawaban.php?id_soal=<?php echo $da['id_soal']; ?>" class="btn btn-info">
                                     <i class="fas fa-eye"></i> Lihat Jawaban </a>
                             </td>
                         </tr>

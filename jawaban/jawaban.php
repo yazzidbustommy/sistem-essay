@@ -28,7 +28,7 @@
                             <td><?php echo $no++; ?></td>
                             <td><?php echo $d['nama_jenissoal']; ?></td>
                             <td>
-                                <a href="lihat.php?id_jenissoal=<?php echo $d['id_jenissoal']; ?>" class="btn btn-primary modal_edit">
+                                <a href="lihat.php?id_jenissoal=<?php echo $d['id_jenissoal']; ?>" class="btn btn-info">
                                     <i class="fas fa-eye"></i> Lihat Jawaban</a>
                             </td>
                         </tr>

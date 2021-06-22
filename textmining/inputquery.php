@@ -15,8 +15,10 @@
                     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="search"></textarea>
                     <input type="hidden" name="id_soal" value="<?= $id_soal ?>">
                 </div>
-                <button type="submit" name="submit" class="btn btn-success" style="margin-bottom: 10px;">
-                    <i class="fa fa-calculator"></i> Cari</button>
+                <div class="mx-auto" style="width: 200px;">
+                    <button type="submit" name="submit" class="btn btn-success btn-lg">
+                        <i class="fa fa-calculator"></i> Cari</button>
+                </div>
             </form>
         </div>
     </div>
