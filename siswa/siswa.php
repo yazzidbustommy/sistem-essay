@@ -31,7 +31,7 @@ include("../head.php");
                 <tbody>
                     <?php
                     $no = 1;
-                    $data = mysqli_query($db, "SELECT * FROM siswa INNER JOIN kelas on siswa.id_kelas=kelas.id_kelas;");
+                    $data = mysqli_query($db, "SELECT * FROM siswa INNER JOIN kelas on siswa.id_kelas=kelas.id_kelas ORDER BY nama_siswa;");
                     while ($d = mysqli_fetch_array($data)) {
                     ?>
                         <tr>
