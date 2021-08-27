@@ -5,7 +5,7 @@
 <footer class="sticky-footer bg-white">
     <div class="container my-auto">
         <div class="copyright text-center my-auto">
-            <span>Copyright &copy; Ujian Essay <b>by Zids</b> 2021</span>
+            <span>Copyright &copy; Kemiripan Essay <b>by Zids</b> 2021</span>
         </div>
     </div>
 </footer>

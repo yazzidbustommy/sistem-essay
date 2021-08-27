@@ -8,7 +8,7 @@
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-book-open"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">Essay Similarity</div>
+                <div class="sidebar-brand-text mx-3">Kemiripan Essay</div>
             </a>
             <hr class="sidebar-divider my-0">
 
@@ -36,7 +36,8 @@
                         <a class="collapse-item" href="../siswa/siswa.php">Data Siswa</a>
                         <a class="collapse-item" href="../jenissoal/jenissoal.php">Data Jenis Soal</a>
                         <a class="collapse-item" href="../soal/soal.php">Data Soal</a>
-                        <a class="collapse-item" href="../jawaban/jawaban.php">Data Jawaban Siswa</a>
+                        <a class="collapse-item" href="../jawaban/jawaban.php">Data Training Jawaban</a>
+                        <a class="collapse-item" href="../datatest/datatest.php">Data Test Jawaban</a>
                     </div>
                 </div>
             </li>

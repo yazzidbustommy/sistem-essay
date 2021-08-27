@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 26 Agu 2021 pada 01.51
+-- Waktu pembuatan: 26 Agu 2021 pada 01.22
 -- Versi server: 10.4.14-MariaDB
 -- Versi PHP: 7.4.10
 
@@ -20,19 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `essay`
 --
-
--- --------------------------------------------------------
-
---
--- Struktur dari tabel `datatest`
---
-
-CREATE TABLE `datatest` (
-  `id_jawaban` int(10) NOT NULL,
-  `jawaban` text NOT NULL,
-  `nis` int(10) NOT NULL,
-  `id_soal` int(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -906,12 +893,6 @@ INSERT INTO `user` (`id`, `username`, `password`, `nama`) VALUES
 --
 
 --
--- Indeks untuk tabel `datatest`
---
-ALTER TABLE `datatest`
-  ADD PRIMARY KEY (`id_jawaban`);
-
---
 -- Indeks untuk tabel `jawaban`
 --
 ALTER TABLE `jawaban`
@@ -979,16 +960,10 @@ ALTER TABLE `user`
 --
 
 --
--- AUTO_INCREMENT untuk tabel `datatest`
---
-ALTER TABLE `datatest`
-  MODIFY `id_jawaban` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
 -- AUTO_INCREMENT untuk tabel `jawaban`
 --
 ALTER TABLE `jawaban`
-  MODIFY `id_jawaban` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=202;
+  MODIFY `id_jawaban` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=201;
 
 --
 -- AUTO_INCREMENT untuk tabel `jenissoal`

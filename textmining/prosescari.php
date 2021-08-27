@@ -22,10 +22,14 @@ function preproses($teks)
     $teks = $hasil;
     return $teks;
 } //end function preproses
-$id_soal = $_GET['id_soal'];
 include '../koneksi/koneksi.php';
-$keyword_user = $_GET['search'];
+$id_soal = $_GET['id_soal'];
+$id_jawaban = $_GET['id_jawaban'];
+$data = mysqli_query($db, "SELECT * FROM datatest where id_jawaban='$id_jawaban'");
+while ($d = mysqli_fetch_array($data)) {
 
+    $keyword_user = $d['jawaban'];
+}
 mysqli_query($db, "TRUNCATE TABLE tbkeyword");
 //hapus index sebelumnya
 $db->query("TRUNCATE TABLE tbindex");
@@ -45,5 +49,5 @@ if ($count_keyword > 0) {
             echo "<script>alert('a)</script>";
         }
     }
-    header('location:hasil.php?id_soal=' . $id_soal . '&search=' . $keyword_user);
+    header('location:hasil.php?id_soal=' . $id_soal);
 }

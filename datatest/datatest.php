@@ -4,7 +4,7 @@
 <?php include("../body.php") ?>
 
 <div class="container-fluid">
-    <h1 class="h3 mb-4 text-gray-800">Data Training Jawaban</h1>
+    <h1 class="h3 mb-4 text-gray-800">Data Test Jawaban</h1>
     <div class="card shadow mb-4">
         <div class="card-header py-3">
             <h6 class="m-0 font-weight-bold text-primary">Data Jenis Soal</h6>

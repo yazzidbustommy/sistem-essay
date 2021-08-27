@@ -4,11 +4,8 @@
 <?php include("../body.php") ?>
 
 <div class="container-fluid">
-    <h1 class="h3 mb-4 text-gray-800">Bobot Jawaban</h1>
+    <h1 class="h3 mb-4 text-gray-800">Bobot Data Training</h1>
     <div class="card shadow mb-4">
-        <div class="card-header py-3">
-
-        </div>
         <div class="table-responsive">
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                 <thead>

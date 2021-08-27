@@ -8,9 +8,13 @@ $data = mysqli_query($db, "select * from jenissoal where id_jenissoal='$id_jenis
 while ($d = mysqli_fetch_array($data)) {
 ?>
     <div class="container-fluid">
-        <h1 class="h3 mb-4 text-gray-800">Pilih Pertanyaan</h1>
+        <h1 class="h3 mb-4 text-gray-800">SOAL <?php echo $d['nama_jenissoal']; ?></h1>
         <div class="card shadow mb-4">
+            <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">Data Pertanyaan</h6>
+            </div>
         <?php } ?>
+
         <div class="table-responsive">
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                 <thead>
@@ -30,7 +34,8 @@ while ($d = mysqli_fetch_array($data)) {
                             <td><?php echo $no++; ?></td>
                             <td><?php echo $da['pertanyaan']; ?></td>
                             <td>
-                                <a href="pilihdatatest.php?id_soal=<?php echo $da['id_soal']; ?>" class="btn btn-primary">Pilih </a>
+                                <a href="lihatdatatest.php?id_soal=<?php echo $da['id_soal']; ?>" class="btn btn-info">
+                                    <i class="fas fa-eye"></i> Lihat Jawaban </a>
                             </td>
                         </tr>
                     <?php } ?>
