@@ -12,11 +12,8 @@ include '../head.php';
         $siswa = $db->query("SELECT * FROM siswa");
         $jumlah = mysqli_num_rows($siswa);
 
-        $jenissoal = $db->query("SELECT * FROM jenissoal");
-        $jjsoal = mysqli_num_rows($jenissoal);
-
-        $soal = $db->query("SELECT * FROM soal");
-        $jsoal = mysqli_num_rows($soal);
+        $datatest = $db->query("SELECT * FROM datatest");
+        $test = mysqli_num_rows($datatest);
 
         $jawaban = $db->query("SELECT * FROM jawaban");
         $jjawaban = mysqli_num_rows($jawaban);
@@ -38,48 +35,33 @@ include '../head.php';
             </div>
         </div>
         <div class="col-xl-3 col-md-6 mb-4">
-            <div class="card border-left-info shadow h-100 py-2">
-                <div class="card-body">
-                    <div class="row no-gutters align-items-center">
-                        <div class="col mr-2">
-                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
-                                Jumlah Jenis Soal</div>
-                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $jjsoal; ?></div>
-                        </div>
-                        <div class="col-auto">
-                            <i class="fas fa-book fa-2x text-gray-300"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-xl-3 col-md-6 mb-4">
-            <div class="card border-left-primary shadow h-100 py-2">
-                <div class="card-body">
-                    <div class="row no-gutters align-items-center">
-                        <div class="col mr-2">
-                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                Jumlah Soal</div>
-                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $jsoal; ?></div>
-                        </div>
-                        <div class="col-auto">
-                            <i class="fas fa-tasks fa-2x text-gray-300"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-xl-3 col-md-6 mb-4">
             <div class="card border-left-secondary shadow h-100 py-2">
                 <div class="card-body">
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
                             <div class="text-xs font-weight-bold text-secondary text-uppercase mb-1">
-                                Jumlah Jawaban</div>
+                                Jumlah Data Training Jawaban</div>
                             <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $jjawaban; ?></div>
                         </div>
                         <div class="col-auto">
                             <i class="fas fa-pencil-alt fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-info shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
+                                Jumlah Data Test Jawaban</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $test; ?></div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-book fa-2x text-gray-300"></i>
                         </div>
                     </div>
                 </div>
