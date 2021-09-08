@@ -108,7 +108,7 @@ class Cosine
         $n = $count['total'];
         //n dipakai di line 146
         //mencari tf
-        //+1 always, cz Query from client must be count too. 
+        //+1 always, cz datatest from student must be count too. 
         $n = $n + 1;
         $tbq = [];
         $tbdn = [];

@@ -60,6 +60,10 @@
                 "root word",
                 "stem"
             ],
+            "support": {
+                "issues": "https://github.com/sastrawi/sastrawi/issues",
+                "source": "https://github.com/sastrawi/sastrawi"
+            },
             "time": "2016-10-22T03:19:27+00:00"
         }
     ],
@@ -71,5 +75,5 @@
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
-    "plugin-api-version": "1.1.0"
+    "plugin-api-version": "2.1.0"
 }
