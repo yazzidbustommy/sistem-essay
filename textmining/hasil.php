@@ -16,11 +16,11 @@ $output = $stemmer->stem($q);
 $cosine->train($output);
 $cosine->q($output);
 //melakukan input token data training
-// $data2 = mysqli_query($connection, "SELECT * FROM jawaban where id_soal='$id_soal'");
-// while ($d2 = mysqli_fetch_array($data2)) {
-//     $output2 = $stemmer->stem($d2['jawaban']);
-//     $cosine->traind($output2);
-// }
+$data2 = mysqli_query($connection, "SELECT * FROM jawaban where id_soal='$id_soal'");
+while ($d2 = mysqli_fetch_array($data2)) {
+    $output2 = $stemmer->stem($d2['jawaban']);
+    $cosine->traind($output2);
+}
 //menghitung TF-IDF
 $cosine->Dn($id_soal);
 $cosine->Dfidf($id_soal);
